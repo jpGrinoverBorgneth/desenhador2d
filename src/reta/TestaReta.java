@@ -2,10 +2,8 @@ package reta;
 
 /**
  * Testa a classe Reta.
- * 
- * @author Matheus Ferreira dos Santos Silvestre
- * @author João Pedro Grinover Borgneth
- * @author João Murilo de Amorim Mariano Santos
+ *
+ * @author Julio Arakaki
  * @version 20220815
  */
 public class TestaReta {

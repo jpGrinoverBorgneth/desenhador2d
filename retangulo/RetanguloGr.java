@@ -5,7 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 /**
- * Escreva uma descrição da classe RetanguloGr aqui.
+ * Metodo de desenho do retangulo grafico
  * 
  * @author (seu nome) 
  * @version (um número da versão ou uma data)

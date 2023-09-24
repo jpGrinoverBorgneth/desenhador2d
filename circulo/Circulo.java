@@ -3,6 +3,14 @@ package circulo;
 import ponto.Ponto;
 import reta.Reta;
 
+/**
+ * Metodo de construção do Circulo
+ * 
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Murilo de Amorim Mariano Santos
+ * @author João Pedro Grinover Borgneth
+ * @version 20230906
+ */
 public class Circulo {
     private Ponto raioInicio, raioFim;
     private Ponto centro;
@@ -12,7 +20,6 @@ public class Circulo {
         setCentro(x1,y1);
         setCoordenadasRaio(x1, y1, x2, y2);
         setRaio(x1, y1, x2, y2);
-        
     }
 
     public Ponto getPontoCentro(){

@@ -1,15 +1,16 @@
 package Triangulo;
 import java.awt.Color;
 import java.awt.Graphics;
-
 import reta.RetaGr;
 import ponto.Ponto;
 
 /**
  * Escreva uma descrição da classe TrianguloGr aqui.
  * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Pedro Grinover Borgneth
+ * @author João Murilo de Amorim Mariano Santos
+ * @version 20230906
  */
 public class TrianguloGr extends Triangulo
 {
@@ -28,14 +29,17 @@ public class TrianguloGr extends Triangulo
   {
       this.corTriangulo = cor;
   }
+  
   public void setNomeTriangulo(String nome)
   {
       this.nomeTriangulo = nome;
   }
+  
   public void setEspTriangulo(int esp)
   {
       this.espTriangulo = esp;
   }
+  
   public void desenharTriangulo(Graphics g)
   {
       RetaGr reta;

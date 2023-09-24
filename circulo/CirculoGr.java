@@ -1,6 +1,5 @@
 package circulo;
 
-
 import reta.Reta;
 import ponto.Ponto;
 import ponto.PontoGr;
@@ -8,6 +7,14 @@ import reta.RetaGr;
 import java.awt.Color;
 import java.awt.Graphics;
 
+/**
+ * Metodo de desenho do Circulo
+ * 
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Murilo de Amorim Mariano Santos
+ * @author João Pedro Grinover Borgneth
+ * @version 20230906
+ */
 public class CirculoGr extends Circulo {
     private Color cor = Color.BLACK;   // cor da reta
     private String nome = ""; // nome da reta
@@ -32,7 +39,7 @@ public class CirculoGr extends Circulo {
         double distRaio = Math.sqrt(deltaX*deltaX + deltaY*deltaY);
         
         //algoritmo para determinar pontos do circulo
-        for(double angulo=0; angulo<=360; angulo++){
+        for(double angulo=0; angulo<=360; angulo+= 0.1){
             x = centro.getX() + distRaio * Math.cos(angulo); 
             y = centro.getY() + distRaio * Math.sin(angulo);
             
@@ -41,6 +48,10 @@ public class CirculoGr extends Circulo {
         }
     }
     
+
+    /**
+     * Setters e Getters do desenho do Circulo
+     */
     public Color getCor(){
         return this.cor;
     }

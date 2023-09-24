@@ -5,8 +5,10 @@ import java.awt.Graphics;
 /**
  * Escreva uma descrição da classe FiguraTriangulo aqui.
  * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Murlo de Amorim Mariano Santos
+ * @author João Pedro Grinover Borgneth
+ * @version 20230906
  */
 public class FiguraTriangulo
 {

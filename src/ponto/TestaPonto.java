@@ -1,11 +1,10 @@
 package ponto;
 
 /**
- * Classe de teste dos pontos
- * @author Matheus Ferreira dos Santos Silvestre
- * @author João Murilo de Amorim Mariano Santos
- * @author João Pedro Grinover Borgneth
- * @version 20230906
+ * Write a description of class TestaPonto here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
  */
 public class TestaPonto{
     public static void main(String args[]) {

@@ -2,12 +2,13 @@ package retangulo;
 import java.awt.Color;
 import java.awt.Graphics;
 
-
 /**
- * Escreva uma descrição da classe FiguraRetangulo aqui.
+ * Classe de desenho do Retangulo
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Murilo de Amorim Mariano Santos
+ * @author João Pedro Grinover Borgneth
  * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @version 20230906
  */
 public class FiguraRetangulo
 {

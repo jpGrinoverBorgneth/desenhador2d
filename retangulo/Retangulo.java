@@ -1,11 +1,14 @@
 package retangulo;
 import ponto.Ponto;
 import reta.Reta;
+
 /**
- * Escreva uma descrição da classe Retangulo aqui.
+ * Metodo de construção do retangulo
  * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Murilo de Amorim Mariano Santos
+ * @author João Pedro Grinover Borgneth
+ * @version 20230906
  */
 public class Retangulo
 {
@@ -27,6 +30,9 @@ public class Retangulo
         setR4(p4, p1);
     }
     
+    /**
+     * Setters dos pontos do retangulo
+     */
     private void setR1(Ponto p1, Ponto p2) {
         this.r1 = new Reta(p1, p2);
     }

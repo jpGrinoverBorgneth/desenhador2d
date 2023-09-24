@@ -4,11 +4,9 @@ import java.awt.Graphics;
 
 /**
  * Desenha figuras com retas.
- * 
- * @author Matheus Ferreira dos Santos Silvestre
- * @author João Pedro Grinover Borgneth
- * @author João Murilo de Amorim Mariano Santos
- * @version 20230906
+ *
+ * @author Julio Arakaki
+ * @version 20220815
  */
 public class FiguraRetas {
     /**
@@ -24,8 +22,8 @@ public class FiguraRetas {
      * @param cor cor da reta
      */
     public static void desenharReta(Graphics g, int x1, int y1, int x2, int y2, String nome, int esp, Color cor){
-       RetaGr r = new RetaGr(x1, y1, x2, y2, cor, nome, esp);
-       r.desenharReta(g);
+        RetaGr r = new RetaGr(x1, y1, x2, y2, cor, nome, esp);
+        r.desenharReta(g);
     }
 
     /**
@@ -44,8 +42,8 @@ public class FiguraRetas {
             int y2 = (int) (Math.random() * 801);
 
             // Cor (R, G e B) aleatorio
-            Color cor = new Color((int) (Math.random() * 256),  
-                    (int) (Math.random() * 256),  
+            Color cor = new Color((int) (Math.random() * 256),
+                    (int) (Math.random() * 256),
                     (int) (Math.random() * 256));
             RetaGr r = new RetaGr(x1, y1, x2, y2, cor, "", esp);
             r.desenharReta(g);

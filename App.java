@@ -2,7 +2,9 @@
 /**
  * Aplicacao para testar primitivos graficos.
  * 
- * @author Julio Arakaki 
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Murilo de Amorim Mariano dos Santos
+ * @author João Pedro Grinover Borgneth
  * @version 20220815
  */
 public class App {

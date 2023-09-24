@@ -4,17 +4,15 @@ import java.awt.Graphics;
 
 /**
  * Contem metodos para desenhar figuras com ponto
- * 
- * @author Matheus Ferreira dos Santos Silvestre
- * @author Jo„o Murilo de Amorim Mariano Santos 
- * @author Jo„o Pedro Grinover Borgneth
- * @version 20230906
+ *
+ * @author Julio Arakaki
+ * @version 20220815
  */
 public class FiguraPontos {
 
     /**
      * Desenha um ponto na tela
-     * @param g biblioteca grafica para desenhar elementos gr·ficos
+     * @param g biblioteca grafica para desenhar elementos gr√°ficos
      * @param x coordena x do ponto
      * @param y coordenada y do ponto
      * @param nome nome do ponto
@@ -22,16 +20,17 @@ public class FiguraPontos {
      * @param cor cor do ponto
      */
     public static void desenharPonto(Graphics g, int x, int y, String nome, int diametro, Color cor){
-        // Color cor = new Color((int) (Math.random() * 256),  
-        // (int) (Math.random() * 256),  
+        // Color cor = new Color((int) (Math.random() * 256),
+        // (int) (Math.random() * 256),
         // (int) (Math.random() * 256));
         PontoGr p = new PontoGr(x, y, cor, nome, diametro);
         p.desenharPonto(g);
+        
     }
 
     /**
      * Desenha variso pontos na tela com cores diferentes
-     * @param g biblioteca grafica para desenhar elementos gr·ficos
+     * @param g biblioteca grafica para desenhar elementos gr√°ficos
      * @param qtde quantidade de pontos
      * @param diametro diametro do pontos
      */
@@ -42,8 +41,8 @@ public class FiguraPontos {
             int y = (int) (Math.random() * 801);
 
             // R, G e B aleatorio
-            Color cor = new Color((int) (Math.random() * 256),  
-                    (int) (Math.random() * 256),  
+            Color cor = new Color((int) (Math.random() * 256),
+                    (int) (Math.random() * 256),
                     (int) (Math.random() * 256));
             PontoGr p = new PontoGr(x, y, cor, diametro);
             p.desenharPonto(g);

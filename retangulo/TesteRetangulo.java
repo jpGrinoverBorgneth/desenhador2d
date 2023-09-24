@@ -1,11 +1,12 @@
 package retangulo;
 
-
 /**
- * Escreva uma descrição da classe TesteRetangulo aqui.
+ * Metódo de teste do Retangulo
  * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Pedro Grinover Borgneth
+ * @author João Murilo de Amorim Mariano Santos
+ * @version 20230906
  */
 public class TesteRetangulo
 {

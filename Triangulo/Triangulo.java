@@ -4,10 +4,12 @@ import ponto.Ponto;
 import java.awt.Color;
 
 /**
- * Escreva uma descrição da classe Triangulo aqui.
+ * Classe construção do triangulo
  * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Pedro Grinover Borgneth
+ * @author João Murilo de Amorim Santos
+ * @version 20230906
  */
 public class Triangulo
 {
@@ -28,14 +30,23 @@ public class Triangulo
         setR2(p2, p3);
         setR3(p3, p1);        
     }
+    
+    /**
+     * Setters para os pontos do triangulo
+     *
+     * @param p1 Um parâmetro
+     * @param p2 Um parâmetro
+     */
     public void setR1(Ponto p1, Ponto p2)
     {
         this.r1 = new Reta(p1, p2);
     }
+    
     public void setR2(Ponto p1, Ponto p2)
     {
         this.r2 = new Reta(p1, p2);
     }
+    
     public void setR3(Ponto p1, Ponto p2)
     {
         this.r3 = new Reta(p1, p2);

@@ -1,38 +1,31 @@
 package ponto;
+
 import java.awt.Color;
 import java.awt.Graphics;
 
-/**
- * Metodos de construção do ponto
- * 
- * @author Matheus Ferreira dos Santos Silvestre
- * @author João Murilo de Amorim Mariano Santos 
- * @author João Pedro Grinover Borgneth
- * @version 20230906
- */
 public class PontoGr extends Ponto {
     Color corPto = Color.BLACK; // cor do ponto
     String nomePto = ""; // nome do ponto
-    Color corNomePto  = Color.BLACK; // cor do nome (string) do ponto  
+    Color corNomePto  = Color.BLACK; // cor do nome (string) do ponto
     int diametro = 1; // diametro do ponto, default = 1
 
     PontoGr(int x, int y){
         super((double)x, (double)y);
-        setCorPto(Color.black);     
-        setCorNomePto(Color.black);     
-        setNomePto("");     
+        setCorPto(Color.black);
+        setCorNomePto(Color.black);
+        setNomePto("");
     }
 
     PontoGr(int x, int y, Color cor){
         super((double)x, (double)y);
-        setCorPto(cor);     
-        setCorNomePto(Color.black);     
-        setNomePto("");     
+        setCorPto(cor);
+        setCorNomePto(Color.black);
+        setNomePto("");
     }
 
     /**
      * Constroi um ponto na posicao x, y e com os atributos
-     * 
+     *
      * @param x coordenada x
      * @param y coordenada y
      * @param corPonto corReta do ponto a ser construido
@@ -45,7 +38,7 @@ public class PontoGr extends Ponto {
 
     /**
      * Constroi um ponto na posicao x, y e com os atributos
-     * 
+     *
      * @param x coordenada x
      * @param y coordenada y
      * @param corPonto corReta do ponto a ser construido
@@ -56,26 +49,25 @@ public class PontoGr extends Ponto {
         this(x, y, corPonto, diametro);
         setNomePto(nomePonto);
     }
-    
     PontoGr(int x, int y, Color cor, String str){
         super((double)x, (double)y);
-        setCorPto(cor);     
-        setCorNomePto(Color.black);     
-        setNomePto(str);     
+        setCorPto(cor);
+        setCorNomePto(Color.black);
+        setNomePto(str);
     }
 
     PontoGr(PontoGr p2d, Color cor){
-        super(p2d);     
-        setCorPto(cor);     
-        setCorNomePto(Color.black);     
-        setNomePto("");     
+        super(p2d);
+        setCorPto(cor);
+        setCorNomePto(Color.black);
+        setNomePto("");
     }
 
     PontoGr(){
-        super();     
-        setCorPto(Color.black);     
-        setCorNomePto(Color.black);     
-        setNomePto("");     
+        super();
+        setCorPto(Color.black);
+        setCorNomePto(Color.black);
+        setNomePto("");
     }
 
 
@@ -136,8 +128,8 @@ public class PontoGr extends Ponto {
     }
 
     /**
-     * desenha um ponto utilizando o oval 
-     * 
+     * desenha um ponto utilizando o oval
+     *
      * @param g contexto grafico
      */
     public void desenharPonto(Graphics g){

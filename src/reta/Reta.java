@@ -3,13 +3,11 @@ import ponto.Ponto;
 /**
  * Reta matematica.
  *
- * @author Matheus Ferreira dos Santos Silvestre
- * @author Jo„o Murilo de Amorim Mariano Santos
- * @author Jo„o Pedro Grinover Borgneth
- * @version 20230906
+ * @author Julio
+ * @version 12/08/2020
  */
 public class Reta {
- 
+
     // Atributos da reta
     public Ponto p1, p2;
 
@@ -25,7 +23,7 @@ public class Reta {
         setP1(new Ponto(x1, y1));
         setP2(new Ponto(x2, y2));
     }
-    
+
     /**
      * Constroi uma reta com valores (double) de x1, y1 e x2, y2
      *
@@ -38,18 +36,18 @@ public class Reta {
         setP1(new Ponto(x1, y1));
         setP2(new Ponto(x2, y2));
     }
-    
+
     /**
      * Controi uma reta com valores de p1 e p2 (externos)
      *
-     * @param p1 Um par‚metro
-     * @param p2 Um par‚metro
+     * @param p1 Um par√¢metro
+     * @param p2 Um par√¢metro
      */
     public Reta(Ponto p1, Ponto p2) {
         setP1(p1);
         setP2(p2);
     }
-    
+
     /**
      * Constroi uma reta com dados de outra (externa)
      *
@@ -59,7 +57,7 @@ public class Reta {
         setP1(r.getP1());
         setP2(r.getP2());
     }
-    
+
     /**
      * Altera valor de p1 de acordo com o parametro
      *
@@ -68,7 +66,7 @@ public class Reta {
     public void setP1(Ponto p){
         this.p1 = p;
     }
-    
+
     /**
      * Altera valor de p2 de acordo com o parametro
      *
@@ -77,7 +75,7 @@ public class Reta {
     public void setP2(Ponto p){
         this.p2 = p;
     }
-    
+
     /**
      * Retorna valor de p1
      *
@@ -86,7 +84,7 @@ public class Reta {
     public Ponto getP1(){
         return this.p1;
     }
-    
+
     /**
      * Retorna p2
      *
@@ -95,7 +93,6 @@ public class Reta {
     public Ponto getP2(){
         return this.p2;
     }
-    
     /**
      * Calcula o valor de m (da equacao reduzida de reta: y = mx + b)
      *
@@ -106,18 +103,18 @@ public class Reta {
         double m = (getP2().getY() - getP1().getY())/(getP2().getX() - getP1().getX());
         return m;
     }
-    
-     /**
-      * Calcula o valor de b (y = mx + b)
-      *
-      * @return valor de b
-      */
-     public double calcularB(){
+    /**
+     * Calcula o valor de b (y = mx + b)
+     *
+     * @return valor de b
+     */
+    public double calcularB(){
         //b = y1 - mx1
         double b = getP1().getY() - calcularM()*getP1().getX();
         return b;
     }
-    
+
+
     /**
      * Imprime a equacao de reta no formato (y = mx + b)
      *
@@ -128,5 +125,5 @@ public class Reta {
         s = s + "\nEq. da reta: y = " + calcularM() + "*x + " + calcularB();
         return s;
     }
-   
+
 }

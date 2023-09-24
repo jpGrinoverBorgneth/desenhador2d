@@ -2,15 +2,14 @@ package reta;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import ponto.Ponto;
 import ponto.PontoGr;
 
 /**
  * Implementacao da classe reta grafica.
  *
- * @author Matheus Ferreira dos Santos Silvestre
- * @author João Pedro Grinover Borgneth
- * @author João Murilo de Amorim Mariano Santos
- * @version 20230906
+ * @author Julio Arakaki
+ * @version 1.0 - 24/08/2020
  */
 public class RetaGr extends Reta{
     // Atributos da reta grafica
@@ -36,7 +35,7 @@ public class RetaGr extends Reta{
         setCorReta(cor);
         setNomeReta(nome);
         setEspReta(esp);
-    }    
+    }
 
     /**
      * RetaGr - Constroi uma reta grafica
@@ -51,7 +50,7 @@ public class RetaGr extends Reta{
         super (x1, y1, x2, y2);
         setCorReta(cor);
         setNomeReta("");
-    }   
+    }
 
     /**
      * RetaGr - Constroi uma reta grafica
@@ -68,7 +67,7 @@ public class RetaGr extends Reta{
         setCorReta(cor);
         setNomeReta("");
         setEspReta(esp);
-    }   
+    }
 
     /**
      * RetaGr - Constroi uma reta grafica
@@ -82,7 +81,7 @@ public class RetaGr extends Reta{
         super (x1, y1, x2, y2);
         setCorReta(Color.black);
         setNomeReta("");
-    }   
+    }
 
     /**
      * RetaGr - Constroi uma reta grafica
@@ -94,7 +93,7 @@ public class RetaGr extends Reta{
         super(p1, p2);
         setCorReta(Color.black);
         setNomeReta("");
-    }    
+    }
 
     /**
      * RetaGr - Constroi uma reta grafica
@@ -107,7 +106,7 @@ public class RetaGr extends Reta{
         super(p1, p2);
         setCorReta(cor);
         setNomeReta("");
-    }    
+    }
 
     /**
      * RetaGr - Constroi uma reta grafica
@@ -121,7 +120,7 @@ public class RetaGr extends Reta{
         super(p1, p2);
         setCorReta(cor);
         setNomeReta(str);
-    }    
+    }
 
     /**
      * Altera a cor da reta.
@@ -197,90 +196,36 @@ public class RetaGr extends Reta{
      * @param g Graphics. Classe com os metodos graficos do Java
      */
     public void desenharReta(Graphics g){
-
-        // calcula m e b da equacao da reta y = mx + b
+        Ponto inicio, fim ;
+        PontoGr ponto;
+        
         double m = calcularM();
         double b = calcularB();
 
-        // Variaveis auxiliares
-        PontoGr ponto; 
-        double x, y;
-
-        double pIni;
-        double pFim;
-        double pIniX;
-        double pIniY;
-        double pFimX;
-        double pFimY;
-
-        // desenha nome do ponto
         g.setColor(getCorNomeReta());
         g.drawString(getNomeReta(), (int)getP1().getX() + getEspReta(), (int)getP1().getY());
 
-        // percorre de x1 ate x2. 
-        // y e´ calculado pela equacao: y = mx + b
-        if(p1.getX() <= p2.getX()) {
-            pIniX = p1.getX();
-            pFimX = p2.getX();
-        }
-        else {
-            pIniX = p2.getX();
-            pFimX = p1.getX();
-        }
-        
-        if(p1.getY() <= p2.getY()) {
-            pIniY = p1.getY();
-            pFimY = p2.getY();
-        }
-        else {
-            pIniY = p2.getY();
-            pFimY = p1.getY();
-        }
-        
-        if(pFimX - pIniX <= pFimY - pIniY)
-        {
-            pIni = pIniY; pFim = pFimY;
-            
-            if(pFimX - pIniX == 0)
-            {
-                x = pIniX;
-                for(y = pIni; y <= pFim; y++){ 
-                    // Calculo de y pela equacao da reta
-                    //y = (m*x + b);
-                    // Define ponto grafico
-                    ponto = new PontoGr((int)x, (int)y, getCorReta(), getEspReta());
-        
-                    // Desenha ponto grafico
-                    ponto.desenharPonto(g);
-                }
-                
+        double deltaX = getP2().getX() - getP1().getX();
+        if(deltaX < 0){ deltaX = deltaX * -1; } 
+
+        double deltaY = getP2().getY() - getP2().getY();
+        if(deltaY < 0){ deltaY = deltaY * -1;}
+
+        if(deltaX > deltaY){
+            //define quais os pontos de inicio e fim
+            if(getP1().getX() < getP2().getX()){
+                inicio = new Ponto(getP2().getX(), getP2().getY());
+                fim = new Ponto(getP1().getX(), getP1().getY());
             }
-            else
-            {
-                for(y = pIni; y <= pFim; y++){ 
-                    // Calculo de y pela equacao da reta
-                    //y = (m*x + b);
-                    x = (y - b) / m;
-                    // Define ponto grafico
-                    ponto = new PontoGr((int)x, (int)y, getCorReta(), getEspReta());
-        
-                    // Desenha ponto grafico
-                    ponto.desenharPonto(g);
-                }
+            else {
+                inicio = new Ponto(getP1().getX(), getP1().getY());
+                fim = new Ponto(getP2().getX(), getP2().getY());
             }
-            
-        }
-        else
-        {
-            pIni = pIniX; pFim = pFimX;
-            for(x = pIni; x <= pFim; x++){ 
-                // Calculo de y pela equacao da reta
-                y = (m*x + b);
-                
-                // Define ponto grafico
+
+            for(double x = inicio.getX(); x<=fim.getX(); x++){
+                //y = mx + b
+                double y = m*x + b;
                 ponto = new PontoGr((int)x, (int)y, getCorReta(), getEspReta());
-    
-                // Desenha ponto grafico
                 ponto.desenharPonto(g);
             }
         }

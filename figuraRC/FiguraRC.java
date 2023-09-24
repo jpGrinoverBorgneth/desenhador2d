@@ -3,14 +3,14 @@ import ponto.Ponto;
 import reta.Reta;
 
 /**
- * Write a description of class Figura here.
- *
- * @author (your name)
+ * Classe de construção da FiguraRC
+ * @author Matheus Ferreira dos Santos Silvestre
+ * @author João Murilo de Amorim Mariano Santos 
+ * @author João Pedro Grinover Borgneth
  * @version (a version number or a date)
  */
 public class FiguraRC
 {
-    // instance variables - replace the example below with your own
     private Ponto p1;
     private Ponto p2;
     private Reta reta;
@@ -25,6 +25,11 @@ public class FiguraRC
         setReta(this.p1,this.p2);
     }
 
+    /**
+     * Getters dos pontos da Figura RC
+     *
+     * @return O valor de retorno
+     */
     public Ponto getP1(){
         return this.p1;
     }
@@ -36,12 +41,9 @@ public class FiguraRC
     public Reta getReta(){
         return this.reta;
     }
-    
+
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Setters dos pontos da FiguraRC
      */
     private void setP1(int x, int y)
     {
